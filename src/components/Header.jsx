@@ -1,0 +1,45 @@
+import React from 'react'
+import Logo from '../assets/images/logo.png'
+import Gift from '../assets/images/colored-gift.gif'
+import { FaCircleArrowRight } from 'react-icons/fa6'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+const Header = () => {
+  useGSAP(() => {
+    gsap.from('.header', {
+      duration: 1,
+      y: '-25%',
+      opacity: 0,
+    })
+  })
+  return (
+    <>
+    <header className='sticky top-0 z-20 flex items-stretch justify-between gap-5 max-w-7xl m-auto p-6 header'>
+      <div className='flex items-center justify-between bg-white rounded-xl w-full px-4 py-3'>
+        <img src={Logo} alt="" className='max-w-36'/>
+        <nav>
+          <ul className='flex items-center gap-9 font-medium tracking-tight'>
+            <li>
+              <a href="">Flavours</a>
+            </li>
+            <li>
+              <a href="">Our Story</a>
+            </li>
+            <li>
+              <a href="">How It's Made</a>
+            </li>
+            <li>
+              <a href="" className='flex items-center justify-between gap-2'>Gifting
+                <img src={Gift} alt="Gift icon" className='max-w-11 pb-2'/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a href="" className='flex items-center justify-center bg-white rounded-xl text-nowrap px-4 py-3 font-medium gap-3'>Explore Flavours <FaCircleArrowRight className='text-orange-400'/></a>
+    </header>
+    </>
+  )
+}
+
+export default Header
