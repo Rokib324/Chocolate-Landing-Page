@@ -7,12 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        orange: '#D2691E', // SaddleBrown or similar for caramel
-        blue: '#00008B',   // DarkBlue for cocoa
-        yellow: '#FFD700', // Gold for orange
-        green: '#228B22',  // ForestGreen for almond
+        beige: "#F5F5DC", // choose your beige
       },
     },
   },
   plugins: [],
-}
+};
