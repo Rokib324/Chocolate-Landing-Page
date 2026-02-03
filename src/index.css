@@ -7,16 +7,17 @@
 @import "@fontsource/inter/700.css";
 @import "@fontsource/caveat/600.css";
 
-
-@theme {
-  --font-body: "Inter, sans-serif";
-  --font-accent: "Caveat", sans-serif;
-  --color-beige: #F5F0E4;
-  --color-black: #2c2c2c;
-  --color-brown: #571f01;
-  --color-blue: #489CD3;
-  --color-yellow: #FDD326;
-  --color-green: #9D9C3D;
+@layer theme {
+  :root {
+    --font-body: "Inter, sans-serif";
+    --font-accent: "Caveat", sans-serif;
+    --color-beige: #F5F0E4;
+    --color-black: #2c2c2c;
+    --color-brown: #571f01;
+    --color-blue: #489CD3;
+    --color-yellow: #FDD326;
+    --color-green: #9D9C3D;
+  }
 }
 
 @layer base {
